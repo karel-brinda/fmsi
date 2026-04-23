@@ -1,0 +1,18 @@
+[package]
+name = "fmsi-rust"
+version = "0.1.0"
+edition = "2021"
+description = "Faithful stable-core Rust port scaffold of FMSI"
+license = "MIT"
+
+[lib]
+name = "fmsi_rust"
+path = "src/lib.rs"
+
+[[bin]]
+name = "fmsi"
+path = "src/main.rs"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
